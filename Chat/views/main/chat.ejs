@@ -1,11 +1,20 @@
+<style rel="text/stylesheet">
+h2{position:relative;text-align:center}
+.form-control{height: inherit;width: 300px;position: relative;left: 40%;top: 20px;}
+#postMessageButton{position: relative;left: 45%;top: 40px;}
+#messagesContainer{text-align:center;font-size:14px}
+#box{}
+</style>
+
 <h2>Welcome <%= username %></h2>
-<div id="newMessageForm">
-    <textarea id="message" placeholder="Enter your message here:"></textarea>
-    <button id="postMessageButton">Add Message</button>
-</div>
+<div id="box">
+<div id="newMessageForm" >
+    <textarea id="message" class="form-control" rows="3" placeholder="Enter your message here:"></textarea>
+    <button id="postMessageButton" class="btn btn-primary btn-lg">Add Message</button>
+</div><br>
 <div id="messagesContainer">
 </div>
-    
+<div>    
 <script>
     var MessageModel = Backbone.Model.extend({
         urlRoot: '/messages',
