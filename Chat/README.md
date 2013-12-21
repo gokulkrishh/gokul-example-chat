@@ -1,2 +1,2 @@
-# Chat
-### a Sails application
+# Chat App
+### Built on Sails.js and Node.js
