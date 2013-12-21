@@ -1,3 +1,5 @@
+/*By creating controller as blank with same name as model, sails will build REST for corresponding resource */
+
 /**
  * MessagesController
  *
