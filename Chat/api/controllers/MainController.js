@@ -1,5 +1,6 @@
 // creating function for each route in MainController
 
+
 var MainController = 
 {
     index: function (req, res)  // req for http request and res for http response
