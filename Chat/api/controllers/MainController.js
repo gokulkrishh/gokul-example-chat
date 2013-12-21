@@ -10,8 +10,8 @@ var MainController =
     signup: function (req, res) 
     {
         signup: function (req, res) {
-        var username = req.param("username"); //getting username
-        var password = req.param("password"); //getting pwd
+        var username = req.param("username"); //getting username from post request
+        var password = req.param("password"); //getting pwd from post request
          
         Users.findByUsername(username).done(function(err, usr) //findByUsername with username which is in user model,with this can find whether a username is already present or not
         {
