@@ -1,19 +1,9 @@
-/**
- * Messages
- *
- * @module      :: Model
- * @description :: A short summary of how this model works and what it represents.
- * @docs		:: http://sailsjs.org/#!documentation/models
- */
+//Message model has user id to identify user and username and user's message
 
 module.exports = {
-
-  attributes: {
-  	
-  	/* e.g.
-  	nickname: 'string'
-  	*/
-    
-  }
-
+    attributes  : {
+        userId: 'INT',
+        username: 'STRING',
+        message: 'STRING'     
+    }
 };
