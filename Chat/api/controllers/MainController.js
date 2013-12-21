@@ -9,7 +9,6 @@ var MainController =
     },
     signup: function (req, res) 
     {
-        signup: function (req, res) {
         var username = req.param("username"); //getting username from post request
         var password = req.param("password"); //getting pwd from post request
          
