@@ -1,2 +1,4 @@
-# Chat
-### a Sails application
+gokul-example-chat
+==================
+
+Sail.js chat 
