@@ -1,19 +1,7 @@
-/**
- * Users
- *
- * @module      :: Model
- * @description :: A short summary of how this model works and what it represents.
- * @docs		:: http://sailsjs.org/#!documentation/models
- */
-
+// for user model we have username and password as attribute
 module.exports = {
-
-  attributes: {
-  	
-  	/* e.g.
-  	nickname: 'string'
-  	*/
-    
-  }
-
+    attributes  : {
+         username: 'STRING',
+         password: 'STRING'     
+    }
 };
