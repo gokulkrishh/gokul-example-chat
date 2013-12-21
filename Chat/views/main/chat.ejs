@@ -5,7 +5,6 @@
     <button id="postMessageButton">Add Message</button>
 </div>
 <div id="messagesContainer">
-template: _.template("<div><p><b>{{ username }}: </b>{{ message }}</p></div>");
 </div>
 
 <script>
@@ -36,7 +35,7 @@ var MessagesView = Backbone.View.extend({
         this.collection.on('add', this.render, this);
         this.render();
     },
-    template: _.template("<div><p>{{ message }}</p></div>"),
+    template: _.template("<div><p><b>{{ username }}: </b>{{ message }}</p></div>"),
         render: function () {
             this.$el.html("");
             this.collection.each(function(msg){
