@@ -11,7 +11,7 @@ signup: function (req, res)
         var username = req.param("username"); //getting username from post request
         var password = req.param("password"); //getting pwd from post request
          
-        Users.findOneByUsername(username).done(function(err, usr) // find is replaced by findone after version 0.9.X
+        Users.findOneByUsername(username).done(function(err, usr) // find is replaced by findOne after version 0.9.X
         {
             if (err) 
             {
