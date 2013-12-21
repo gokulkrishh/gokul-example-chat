@@ -1,4 +1,4 @@
 Chat app
 ==================
 
-A simple chat app built on Sail.js and node.js
+A simple chat app built on Sails.js and node.js
