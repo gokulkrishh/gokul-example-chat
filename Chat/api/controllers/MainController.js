@@ -74,14 +74,14 @@ login: function (req, res)
 },
 chat: function (req, res) 
     {
-         if (req.session.user) 
-         {
-            res.view({username: req.session.user.username}); //checking user is logged in or not and if logged, load the view
-         }
-         else // if not logged in redirect to index page
-         {
-            res.redirect('/');
-         }
+        if (req.session.user) 
+        {
+          res.view({ username: req.session.user.username });
+        } else 
+        {
+          res.redirect('/');
+        }
     }
 };
+
 module.exports = MainController;  
