@@ -11,7 +11,7 @@ signup: function (req, res)
         var username = req.param("username"); //getting username from post request
         var password = req.param("password"); //getting pwd from post request
          
-        Users.findByUsername(username).done(function(err, usr) //findByUsername with username which is in user model,with this can find whether a username is already present or not
+        Users.findOneByUsername(username).done(function(err, usr) // find is replaced by findone after version 0.9.X
         {
             if (err) 
             {
@@ -45,7 +45,7 @@ login: function (req, res)
     var username = req.param("username");
     var password = req.param("password");
      
-    Users.findByUsername(username).done(function(err, usr) 
+    Users.findOneByUsername(username).done(function(err, usr) // find is replaced by findone after version 0.9.X
     {
         if (err) 
         {
