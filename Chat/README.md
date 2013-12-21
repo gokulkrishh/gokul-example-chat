@@ -1,4 +1,4 @@
-gokul-example-chat
+Chat App
 ==================
 
-Sail.js chat 
+a simple chat app built on Sails.js and node.js 
