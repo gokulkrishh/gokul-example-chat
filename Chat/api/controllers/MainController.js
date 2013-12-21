@@ -8,7 +8,39 @@ var MainController =
     },
     signup: function (req, res) 
     {
-
+        signup: function (req, res) {
+        var username = req.param("username"); //getting username
+        var password = req.param("password"); //getting pwd
+         
+        Users.findByUsername(username).done(function(err, usr) //findByUsername with username which is in user model,with this can find whether a username is already present or not
+        {
+            if (err) 
+            {
+                res.send(500, { error: "DB Error" }); 
+            } 
+            else if (usr) 
+            {
+                res.send(400, {error: "Username already Taken"}); //if username already present. Send error
+            } 
+            else 
+            {
+                var hasher = require("password-hash"); // adding password hash module to variable hasher
+                password = hasher.generate(password); //hashing password with hasher
+                 
+                Users.create({username: username, password: password}).done(function(error, user) {
+                if (error) 
+                {
+                    res.send(500, {error: "DB Error"}); 
+                } 
+                else 
+                {
+                    req.session.user = user; //user is created and stored in session
+                    res.send(user); // sending back response
+                }
+                });
+             }
+        });
+    }
          
     },
     login: function (req, res) 
