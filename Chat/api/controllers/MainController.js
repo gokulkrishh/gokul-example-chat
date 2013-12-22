@@ -83,5 +83,4 @@ chat: function (req, res)
         }
     }
 };
-
 module.exports = MainController;  
