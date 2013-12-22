@@ -27,7 +27,7 @@ Login and Signup Form
  my own written chatbox which is simply HTML and CSS.
 
 Errors i found is 
-1.findUser which is replaced as fineOne in latest sails version
+1.findUser which is replaced as findOne in latest sails version
 2.On socket.on callback the uri.split("/").pop(); is replace by view in new version that is all REST method are stored in view
   
 
