@@ -2,7 +2,7 @@
 <html>
   <head>
     
-    <title><%- title %></title>
+    <title>chat app</title>
 
     <!-- Viewport mobile tag for sensible mobile support -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
@@ -19,10 +19,17 @@
         .login{position: relative;left: 20%;top: 50px;}
         #loginButton{margin-left: 4%;}
         #signupButton{margin-left: 4%;}
-        .signup{position: relative;left: 60%;top: -200px;}
+        .signup{position: relative;left: 55%;top: -200px;}
         h1{text-align: center;}
         .well{max-width: 350px;}
     </style>
+
+    <!-- Bring in the socket.io client -->
+    <script type="text/javascript" src="/js/socket.io.js"></script>
+    <!-- then beef it up with some convenience logic for talking to Sails.js -->
+    <script type="text/javascript" src="/js/sails.io.js"></script>
+    <!-- listen on socket.io for incoming messages -->
+     <script type="text/javascript" src="/js/app.js"></script>
   </head>
 
   <body>
@@ -31,12 +38,7 @@
     <%- body %>
 
 
-    <!-- Bring in the socket.io client -->
-    <script type="text/javascript" src="/js/socket.io.js"></script>
-    <!-- then beef it up with some convenience logic for talking to Sails.js -->
-    <script type="text/javascript" src="/js/sails.io.js"></script>
-    <!-- listen on socket.io for incoming messages -->
-    <script type="text/javascript" src="/js/app.js"></script>
+    
     
     </body>
 </html>

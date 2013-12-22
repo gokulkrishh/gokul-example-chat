@@ -15,11 +15,11 @@ signup: function (req, res)
         {
             if (err) 
             {
-                res.send(500, { error: "DB Error" }); 
+                res.send(500,"DB Error"); 
             } 
             else if (usr) 
             {
-                res.send(400, {error: "Username already Taken"}); //if username already present. Send error
+                res.send(400,"Username already Taken"); //if username already present. Send error
             } 
             else 
             {
@@ -49,7 +49,7 @@ login: function (req, res)
     {
         if (err) 
         {
-            res.send(500, { error: "DB Error" });
+            res.send(500,"DB Error");
         } 
         else 
         {
@@ -62,12 +62,12 @@ login: function (req, res)
                 } 
                 else 
                 {
-                    res.send(400, { error: "Wrong Password" });
+                    res.send(400,"Wrong Password");
                 }
             } 
             else 
             {
-                res.send(404, { error: "User not Found" });
+                res.send(404,"User not Found");
             }
         }
     });
@@ -83,5 +83,4 @@ chat: function (req, res)
         }
     }
 };
-
 module.exports = MainController;  
