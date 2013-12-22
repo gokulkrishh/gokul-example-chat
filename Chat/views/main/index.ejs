@@ -65,4 +65,18 @@
         alert("A username and password is required");
     }
 }); 
+
+
+$(".login").keyup(function(event){
+    if(event.keyCode == 13){
+        $("#loginButton").click();
+    }
+});
+
+$(".signup").keyup(function(event){
+    if(event.keyCode == 13){
+        $("#signupButton").click();
+    }
+});
+
 </script>
