@@ -1,4 +1,3 @@
-
 module.exports = function (req, res, next) {
     if (req.session.user) {
         var action = req.target.action;

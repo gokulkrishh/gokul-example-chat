@@ -26,12 +26,13 @@
       // to run when a new message arrives from the Sails.js
       // server.
       ///////////////////////////////////////////////////////////
-      log('New comet message received :: ', message);
+      log('new msg received :: ', message);
       //////////////////////////////////////////////////////
 
     });
+    
 
-
+    
     ///////////////////////////////////////////////////////////
     // Here's where you'll want to add any custom logic for
     // when the browser establishes its socket connection to 
@@ -48,7 +49,7 @@
 
   });
 
-
+  
   // Expose connected `socket` instance globally so that it's easy
   // to experiment with from the browser console while prototyping.
   window.socket = socket;
