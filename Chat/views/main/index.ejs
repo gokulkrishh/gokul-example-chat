@@ -35,7 +35,7 @@
                     window.location = "/chat";
                 }
             ).fail(function(res){
-                alert("Error: " + res.getResponseHeader("error"));
+                alert(res.responseText);
             });
         } else {
             alert("A username and password is required");
@@ -56,7 +56,7 @@
                     window.location = "/chat";
                 }
             ).fail(function(res){
-                alert("Error: " + res.getResponseHeader("error"));
+                alert(res.responseText);
             });
         } else {
             alert("Passwords don't match");
