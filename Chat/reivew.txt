@@ -1,0 +1,31 @@
+Sails.js Chat app
+
+1.Install the password-hash in npm using npm install password-hash
+
+About this project and techonology involved
+
+1.As a beginner in sails.js, its very easy to understand which is MVC design pattern.
+2.Sails.js has pretty much advantage over other frameworks like express, interms of speed.
+3.Starting with generating the models and controllers to rendering a message model in backbone.
+4.This app has 2 controllers and 2 models and one model hold data of user and other model hold the message.
+5.The mainController has function for corresponding routes.
+6.Next is creating a route so that it can handle the homepage and chat page with two handlers for login and signup page.
+7.Creating a folder called main to hold two pages, index page will have login and signup form and other page is our chatbox.
+8.Jquery handlers are written to handle the click event and send a ajax post request and on the success we will redirect user to chat page else if
+  the ajax call fails we will alert the responseText from the mainController.
+8.Password are hashed and stored in a session using a npm module called password-hash.
+9.On the login we will verify the user password using hash-password function.
+10.Using the backbone view extent, which will fetch collection of messages from messagemodel and populate messages everytime when a model is added which is much simpler than 
+   than writing a jquery or javascript function for fetching everytime.
+11.Using tha backbone sync function which will check for option where that is id and send an ajax request when fetch is called.
+12.Next is callback function which has actual message, which is create or deleted or updated using msg.views that is http r.
+13.At last we will extend the sailCollection with message model.
+14.The one user message updates are showed to other user immediately in chatbox.
+
+Login and Signup Form
+ the index page which has login and signup form are styled using bootstrap and chat page which has chatbox is 
+ my own written chatbox which is simply HTML and CSS.
+
+
+  
+
